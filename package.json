@@ -1,0 +1,24 @@
+{
+  "name": "expapp",
+  "version": "1.0.0",
+  "description": "To-do application w/ Express js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozers/expapp.git"
+  },
+  "author": "Ozer SUBASI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ozers/expapp/issues"
+  },
+  "homepage": "https://github.com/ozers/expapp#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  }
+}

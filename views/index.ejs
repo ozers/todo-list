@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>To-do application</title>
+    <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+<div class="container">
+
+    <h2>To-do application with express js</h2>
+
+
+    <form action="/addplan" method="post">
+
+        <div class="form-group">
+            <div class="input-group mb-3">
+                <input class="form-control" type="text" name="newplan" placeholder="Add new plan to do">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary">Add</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <h2>To-do List</h2>
+
+                    <% for(var i = 0; i < plans.length; i++){ %>
+                        <li><input type="checkbox" name="check" value="<%= plans[i] %>"> <%= plans[i] %> </li>
+                    <% } %>
+
+                    <button class="btn btn-secondary" formaction="/plandone" type="submit" id="dn">Done</button>
+
+                    <button class="btn btn-secondary" formaction="/removeplan" type="submit" id="rmv">Remove</button>
+                </div>
+            </div>
+    </form>
+    <div class="col-sm">
+        <h2>Completed Plans</h2>
+
+        <% for(var i = 0; i < completed.length; i++){ %>
+            <li><input type="checkbox" checked><%= completed[i] %> </li>
+        <% } %>
+    </div>
+    <form method="post">
+        <div class="col-sm">
+            <div class="form-group">
+                <h2>Removed Plans</h2>
+
+                <% for(var i = 0; i < removed.length; i++){ %>
+
+                    <li><input type="checkbox" name="removecheck" value="<%= removed[i] %>"><%= removed[i] %></li>
+                <% } %>
+
+                <button class="btn btn-secondary" formaction="/returntodo" type="submit" id="bck">Return Todo
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>
