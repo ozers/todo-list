@@ -10,14 +10,15 @@
 </head>
 
 <body>
+
 <div class="container">
 
-    <h2>To-do application with express js</h2>
+    <h2>To-do Application with ExpressJS</h2>
 
 
     <form action="/addplan" method="post">
 
-        <div class="form-group">
+        <div class="form-group" text-align="center">
             <div class="input-group mb-3">
                 <input class="form-control" type="text" name="newplan" placeholder="Add new plan to do">
                 <div class="input-group-append">
@@ -28,7 +29,7 @@
         </div>
 
         <div class="row">
-            <div class="col-sm">
+            <div class="col-md">
                 <div class="form-group">
                     <h2>To-do List</h2>
 
@@ -42,7 +43,7 @@
                 </div>
             </div>
     </form>
-    <div class="col-sm">
+    <div class="col-md">
         <h2>Completed Plans</h2>
 
         <% for(var i = 0; i < completed.length; i++){ %>
@@ -50,7 +51,7 @@
         <% } %>
     </div>
     <form method="post">
-        <div class="col-sm">
+        <div class="col-md">
             <div class="form-group">
                 <h2>Removed Plans</h2>
 

@@ -1,11 +1,10 @@
 * {
     font-family: 'Livvic', sans-serif;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 body {
-    background: rgb(245, 245, 245);
-    color: #333333;
+    background-color: darkgray;
     margin-top: 20px;
 }
 

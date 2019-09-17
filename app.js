@@ -57,8 +57,8 @@ app.post('/returntodo', function (req, res) {
         plans.push(returnPlan);
         removed.splice(removed.indexOf(returnPlan), 1);
     } else if (typeof returnPlan == "object") {
-        for (var i = 0; i < returnPlan; i++) {
-            plans.push(returnPlan);
+        for (var i = 0; i < returnPlan.length; i++) {
+            plans.push(returnPlan[i]);
             removed.splice(removed.indexOf(returnPlan[i]), 1);
         }
     }
